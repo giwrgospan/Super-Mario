@@ -112,6 +112,12 @@ body {
 				if (cursors.up.isDown && player.body.onFloor()) {
 					player.body.velocity.y = -190;
 					player.animations.stop();
+					
+					<audio controls>
+                                        <source src="jump.wav" type="audio/wav">
+                                        </audio>
+
+
 				}
 
 				if (player.body.velocity.y != 0) {
