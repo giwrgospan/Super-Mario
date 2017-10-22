@@ -130,8 +130,10 @@ body {
 		function coinOverlap(player, coin) {
 			coin.kill();
 			
-			var audio = new Audio('audio/coin.wav');
-                        audio.play()
+			<audio controls>
+                        <source src="coin.wav" type="audio/wav">
+                        
+                        </audio>
 		}
 
 		function goombaOverlap(player, goomba) {
