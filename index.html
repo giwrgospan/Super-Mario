@@ -24,6 +24,8 @@ body {
 			create : create,
 			update : update
 		}, false, false);
+		this.score=0;
+                this.scoreText='';
 		function preload() {
 			//  We need this because the assets are on github pages
 			//  Remove the next 2 lines if running locally
@@ -74,6 +76,7 @@ body {
 			player.goesRight = true;
 			game.camera.follow(player);
 			cursors = game.input.keyboard.createCursorKeys();
+			this.scoreText = game.add.text(0, 500, 'Score: 0', { fontSize: '34px Arial', fill: 'white' });
 		}
 		function update() {
 			game.physics.arcade.collide(player, layer);
@@ -113,7 +116,9 @@ body {
 			coin.kill();
 			var audio = new Audio('audio/coin.wav');
  -                        audio.play()
-
+			
+			this.score+=5;
+                        this.scoreText.text= 'Score: ' + this.score;
 		}
 		
 		function goombaOverlap(player, goomba) {
