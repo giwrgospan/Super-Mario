@@ -24,8 +24,7 @@ body {
 			create : create,
 			update : update
 		}, false, false);
-		this.score=0;
-                this.scoreText='';
+		var myScore;
 		function preload() {
 			//  We need this because the assets are on github pages
 			//  Remove the next 2 lines if running locally
@@ -76,7 +75,7 @@ body {
 			player.goesRight = true;
 			game.camera.follow(player);
 			cursors = game.input.keyboard.createCursorKeys();
-			this.scoreText = game.add.text(0, 500, 'Score: 0', { fontSize: '34px Arial', fill: 'white' });
+			myScore = new component("30px", "Consolas", "black", 280, 40, "text");
 		}
 		function update() {
 			game.physics.arcade.collide(player, layer);
