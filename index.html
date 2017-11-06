@@ -24,7 +24,7 @@ body {
 			create : create,
 			update : update
 		}, false, false);
-		var myScore;
+		
 		function preload() {
 			//  We need this because the assets are on github pages
 			//  Remove the next 2 lines if running locally
@@ -75,7 +75,7 @@ body {
 			player.goesRight = true;
 			game.camera.follow(player);
 			cursors = game.input.keyboard.createCursorKeys();
-			myScore = new component("30px", "Consolas", "white", 280, 40, "text");
+			
 		}
 		function update() {
 			game.physics.arcade.collide(player, layer);
