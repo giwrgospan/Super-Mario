@@ -115,6 +115,8 @@ body {
 		}
 		function coinOverlap(player, coin) {
 			coin.kill();
+			score+=5;
+			scoreText.text='Score:' + score;
 			var audio = new Audio('audio/coin.wav');
  -                        audio.play()
 			
