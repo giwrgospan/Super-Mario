@@ -117,6 +117,7 @@ body {
 			coin.kill();
 			score+=5;
 			scoreText.text='Score:' + score;
+			scoreText.fixedToCamera = true;
 			var audio = new Audio('audio/coin.wav');
  -                        audio.play()
 			
